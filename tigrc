@@ -1,0 +1,20 @@
+bind status + !git commit --amend
+bind status d !git rebase --continue
+
+bind status S !?git stash save --include-untracked --keep-index %(prompt)
+bind stash D !?git stash drop %(stash)
+bind stash A !?git stash apply %(stash)
+
+bind main ! !git revert %(commit)
+
+bind main B !git rebase -i %(commit) --rebase-merges
+
+bind status I !sh -c "git mergetool -y \"$(git rev-parse --show-toplevel)/%(file)\""
+bind main I !git difftool %(commit)^!
+
+bind status P !git push
+
+bind status z !?git checkout -- %(file)
+
+bind main X !?git checkout %(commit)
+
