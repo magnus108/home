@@ -30,7 +30,10 @@
 
     programs.kitty = {
       enable = true;
-      theme = "Gruvbox Dark";
+      theme = "Adventure Time";
+      darwinLaunchOptions = [
+          "--single-instance"
+        ];
     };
 
     programs.neovim = {
@@ -40,7 +43,7 @@
       vimAlias = true;
       withNodeJs = true;
       withPython3 = true;
-      plugins = with pkgs.vimPlugins; [ haskell-vim coc-nvim ];
+      plugins = with pkgs.vimPlugins; [ vim-nix haskell-vim coc-nvim ];
     };
 
     programs.zsh = {

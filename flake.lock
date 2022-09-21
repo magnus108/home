@@ -62,7 +62,28 @@
         "darwin": "darwin",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
+        "spacebar": "spacebar",
         "yabai-src": "yabai-src"
+      }
+    },
+    "spacebar": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1639952514,
+        "narHash": "sha256-/uJiVl9oQwrquXG1EePV/FmNhs4o3mOAGhrcSPEbdKE=",
+        "owner": "shaunsingh",
+        "repo": "spacebar",
+        "rev": "fae55fce78f6130bf4d766eae09ae838447c60b4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "shaunsingh",
+        "repo": "spacebar",
+        "type": "github"
       }
     },
     "utils": {
