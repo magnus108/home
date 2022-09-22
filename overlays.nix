@@ -1,4 +1,4 @@
-{ pkgs, spacebar, system, yabai-src, ... }: {
+{ spacebar, system, yabai-src, ... }: {
     nixpkgs = {
         overlays = [
             spacebar.overlay."${system}"
@@ -14,7 +14,6 @@
                         prev.xxd
                         SkyLight
                     ];
-
 
                     nativeBuildInputs = [
                         prev.runCommand "build-symlinks" { } ''

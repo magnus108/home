@@ -28,13 +28,11 @@
     outputs = { self, darwin, spacebar, nixpkgs, yabai-src, home-manager, ...}:
         let
             system = "aarch64-darwin";
+            nixpkgs.overlays = import ./overlays.nix { inherit system spacebar yabai-src; };
         in {
             darwinConfigurations.magnus = darwin.lib.darwinSystem {
                 inherit system;
-                specialArgs = { inherit system spacebar yabai-src; };
-
                 modules = [
-                    ./overlays.nix
                     ./darwin.nix
                     home-manager.darwinModule {
                         home-manager = {

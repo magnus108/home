@@ -1,8 +1,4 @@
 { pkgs, yabai, spacebar, ... }: {
-    #nix.package = pkgs.nixFlakes;
-      #programs = { 
-	  #  zsh.enable = true;
-      #};
 
     system = {
         stateVersion = 4;
@@ -55,6 +51,37 @@
                 display_separator_icon = "|";
                 right_shell_icon = " ";
                 right_shell_command = "whoami";
+            };
+        };
+
+        yabai = {
+            enable = true;
+            package = pkgs.yabai;
+            config = {
+                # layout
+                layout = "bsp";
+                auto_balance = "on";
+                split_ratio = "0.50";
+                window_placement = "second_child";
+                # Gaps
+                window_gap = 18;
+                top_padding = 18;
+                bottom_padding = 46;
+                left_padding = 18;
+                right_padding = 18;
+                # shadows and borders
+                window_shadow = "on";
+                window_border = "off";
+                window_border_width = 3;
+                window_opacity = "on";
+                window_opacity_duration = "0.1";
+                active_window_opacity = "1.0";
+                normal_window_opacity = "1.0";
+                # mouse
+                mouse_modifier = "cmd";
+                mouse_action1 = "move";
+                mouse_action2 = "resize";
+                mouse_drop_action = "swap";
             };
         };
 
