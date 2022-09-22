@@ -1,7 +1,7 @@
-{ pkgs, yabai, spacebar, ... }: {
+{ pkgs, spacebar, system, yabai-src, ... }: {
     nixpkgs = {
         overlays = [
-            spacebar.overlay
+            spacebar.overlay."${system}"
             (final: prev: {
                 yabai = prev.yabai.overrideAttrs (old: {
                     version = "4.0.0-dev";
