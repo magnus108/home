@@ -1,4 +1,4 @@
-{ pkgs, yabai, spacebar, ... }: {
+{ pkgs, ... }: {
 
     system = {
         stateVersion = 4;

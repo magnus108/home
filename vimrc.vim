@@ -43,5 +43,6 @@ set title
 set undolevels=5000
 set visualbell
 set wildmenu
+set nowrap
 
 nmap <silent> gd <Plug>(coc-definition)
