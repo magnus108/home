@@ -25,7 +25,7 @@
 
         kitty = {
             enable = true;
-            theme = "Adventure Time";
+            theme = "Monokai Pro";
             darwinLaunchOptions = [
                 "--single-instance"
             ];
