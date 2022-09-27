@@ -2,6 +2,10 @@
 
     programs.zsh.enable = true;
 
+    environment.variables = {
+        EDITOR = "nvim";
+    };
+
     system = {
         stateVersion = 4;
         defaults = {
@@ -73,12 +77,10 @@
                 right_padding = 18;
                 # shadows and borders
                 window_shadow = "on";
-                window_border = "off";
-                window_border_width = 3;
                 window_opacity = "on";
                 window_opacity_duration = "0.1";
                 active_window_opacity = "1.0";
-                normal_window_opacity = "1.0";
+                normal_window_opacity = "0.1";
                 # mouse
                 mouse_modifier = "cmd";
                 mouse_action1 = "move";
