@@ -80,7 +80,7 @@
                 window_opacity = "on";
                 window_opacity_duration = "0.1";
                 active_window_opacity = "1.0";
-                normal_window_opacity = "0.1";
+                normal_window_opacity = "0.7";
                 # mouse
                 mouse_modifier = "cmd";
                 mouse_action1 = "move";
@@ -93,7 +93,7 @@
             enable = true;
             skhdConfig = ''
                 # open terminal
-                cmd - return : kitty --single-instance
+                cmd - return : kitty --single-instance --directory=~
                 # focus window
                 lalt - h : yabai -m window --focus west
                 lalt - j : yabai -m window --focus south

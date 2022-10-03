@@ -28,6 +28,7 @@
             theme = "Monokai Pro";
             darwinLaunchOptions = [
                 "--single-instance"
+                "--directory=~"
             ];
         };
 
