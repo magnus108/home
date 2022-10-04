@@ -1,7 +1,6 @@
 { pkgs, ... }: {
 
     xdg.configFile."tig/config".text = builtins.readFile ./tigrc;
-    xdg.configFile."nvim/coc-settings.json".text = builtins.readFile ./coc-settings.json;
 
     home = {
         stateVersion = "21.11";
@@ -34,9 +33,10 @@
 
         neovim = {
             enable = true;
-            extraConfig = builtins.readFile ./vimrc.vim;
+            generatedConfigViml = builtins.readFile ./vimrc.vim;
             viAlias = true;
             vimAlias = true;
+            vimdiffAlias = true;
             withNodeJs = true;
             withPython3 = true;
             plugins = with pkgs.vimPlugins; [
@@ -44,6 +44,11 @@
                 haskell-vim
                 coc-nvim
             ];
+            coc = {
+                enable = true;
+                settings = builtins.readFile ./coc-settings.json;
+            };
+
         };
 
         zsh = {
