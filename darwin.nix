@@ -63,6 +63,7 @@
         yabai = {
             enable = true;
             package = pkgs.yabai;
+            enableScriptingAddition = true;
             config = {
                 # layout
                 layout = "bsp";
@@ -91,8 +92,6 @@
                 # rules
                 yabai -m rule --add app='System Preferences' manage=off
                 yabai -m rule --add app='Activity Monitor' manage=off
-                yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-                sudo yabai --load-sa
             '';
         };
 
