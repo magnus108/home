@@ -87,13 +87,21 @@
                 mouse_action2 = "resize";
                 mouse_drop_action = "swap";
             };
+            extraConfig = ''
+                # rules
+                yabai -m rule --add app='System Preferences' manage=off
+                yabai -m rule --add app='Activity Monitor' manage=off
+                yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+                sudo yabai --load-sa
+            '';
         };
 
         skhd = {
             enable = true;
             skhdConfig = ''
-                # open terminal
+                # open programs
                 cmd - return : kitty --single-instance --directory=~
+                shift + cmd - return : open -a Safari
                 # focus window
                 lalt - h : yabai -m window --focus west
                 lalt - j : yabai -m window --focus south
