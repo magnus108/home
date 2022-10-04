@@ -100,8 +100,8 @@
             enable = true;
             skhdConfig = ''
                 # open programs
-                cmd - return : kitty --single-instance --directory=~
-                shift + cmd - return : open -a Safari
+                cmd - return : open -na kitty
+                cmd + shift - return : open -na Safari
                 # focus window
                 lalt - h : yabai -m window --focus west
                 lalt - j : yabai -m window --focus south
