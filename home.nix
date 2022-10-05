@@ -33,7 +33,7 @@
 
         neovim = {
             enable = true;
-            generatedConfigViml = builtins.readFile ./vimrc.vim;
+            extraConfig = builtins.readFile ./vimrc.vim;
             viAlias = true;
             vimAlias = true;
             vimdiffAlias = true;
