@@ -81,7 +81,7 @@
                 window_opacity = "on";
                 window_opacity_duration = "0.1";
                 active_window_opacity = "1.0";
-                normal_window_opacity = "0.7";
+                normal_window_opacity = "1.0";
                 # mouse
                 mouse_modifier = "cmd";
                 mouse_action1 = "move";
@@ -120,7 +120,6 @@
                 alt - 5 : yabai -m space --focus 5
                 alt - 6 : yabai -m space --focus 6
                 alt - 7 : yabai -m space --focus 7
-                alt - 8 : yabai -m space --focus 8
                 # focus on next/prev space
                 alt + ctrl - q : yabai -m space --focus prev
                 alt + ctrl - e : yabai -m space --focus next
@@ -133,12 +132,12 @@
                 shift + alt - 5 : yabai -m window --space 5
                 shift + alt - 6 : yabai -m window --space 6
                 shift + alt - 7 : yabai -m window --space 7
-                shift + alt - 8 : yabai -m window --space 8
                 # float / unfloat window and center on screen
                 lalt - t : yabai -m window --toggle float;\
                             yabai -m window --grid 4:4:1:1:2:2
                 # toggle window zoom
                 lalt - d : yabai -m window --toggle zoom-parent
+		lalt - f : yabai -m window --toggle native-fullscreen
             '';
         };
     };
