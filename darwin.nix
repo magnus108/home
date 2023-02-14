@@ -112,32 +112,32 @@
                 shift + lalt - j : yabai -m window --swap south
                 shift + lalt - k : yabai -m window --swap north
                 # focus spaces
-                alt - x : yabai -m space --focus recent
-                alt - 1 : yabai -m space --focus 1
-                alt - 2 : yabai -m space --focus 2
-                alt - 3 : yabai -m space --focus 3
-                alt - 4 : yabai -m space --focus 4
-                alt - 5 : yabai -m space --focus 5
-                alt - 6 : yabai -m space --focus 6
-                alt - 7 : yabai -m space --focus 7
+                cmd - x : yabai -m space --focus recent
+                cmd - 1 : yabai -m space --focus 1
+                cmd - 2 : yabai -m space --focus 2
+                cmd - 3 : yabai -m space --focus 3
+                cmd - 4 : yabai -m space --focus 4
+                cmd - 5 : yabai -m space --focus 5
+                cmd - 6 : yabai -m space --focus 6
+                cmd - 7 : yabai -m space --focus 7
                 # focus on next/prev space
-                alt + ctrl - q : yabai -m space --focus prev
-                alt + ctrl - e : yabai -m space --focus next
+                cmd + ctrl - q : yabai -m space --focus prev
+                cmd + ctrl - e : yabai -m space --focus next
                 # send window to desktop
-                shift + alt - x : yabai -m window --space recent
-                shift + alt - 1 : yabai -m window --space 1
-                shift + alt - 2 : yabai -m window --space 2
-                shift + alt - 3 : yabai -m window --space 3
-                shift + alt - 4 : yabai -m window --space 4
-                shift + alt - 5 : yabai -m window --space 5
-                shift + alt - 6 : yabai -m window --space 6
-                shift + alt - 7 : yabai -m window --space 7
+                shift + cmd - x : yabai -m window --space recent
+                shift + cmd - 1 : yabai -m window --space 1
+                shift + cmd - 2 : yabai -m window --space 2
+                shift + cmd - 3 : yabai -m window --space 3
+                shift + cmd - 4 : yabai -m window --space 4
+                shift + cmd - 5 : yabai -m window --space 5
+                shift + cmd - 6 : yabai -m window --space 6
+                shift + cmd - 7 : yabai -m window --space 7
                 # float / unfloat window and center on screen
                 lalt - t : yabai -m window --toggle float;\
                             yabai -m window --grid 4:4:1:1:2:2
                 # toggle window zoom
-                lalt - d : yabai -m window --toggle zoom-parent
-		lalt - f : yabai -m window --toggle native-fullscreen
+                cmd - d : yabai -m window --toggle zoom-parent
+                cmd - f : yabai -m window --toggle native-fullscreen
             '';
         };
     };

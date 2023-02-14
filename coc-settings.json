@@ -1,23 +1,25 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "languageserver": {
-    "haskell": {
-      "command": "haskell-language-server-wrapper",
-      "args": ["--lsp"],
-      "rootPatterns": [ "*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml" ],
-      "filetypes": ["haskell", "lhaskell"],
-      "settings": {
+    "coc.preferences.formatOnSaveFiletypes": ["*"],
+    "languageserver": {
         "haskell": {
-          "checkParents": "CheckOnSave",
-          "checkProject": true,
-          "maxCompletions": 40,
-          "formattingProvider": "ormolu",
-          "plugin": {
-            "stan": { "globalOn": true },
-            "tatics": { "globalOn": true }
-          }
+        "command": "haskell-language-server",
+        "args": ["--lsp"],
+        "rootpatterns": [ "*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml" ],
+        "filetypes": ["haskell", "lhaskell"],
+        "settings": {
+            "haskell": {
+            "checkparents": "checkonsave",
+            "checkproject": true,
+            "maxcompletions": 40,
+            "formattingprovider": "ormolu",
+            "plugin": {
+                "tactic": { "globalon": true },
+                "haddockComments": { "globalon": true },
+                "stan": { "globalon": true },
+                "hlint": { "globalon": true }
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }

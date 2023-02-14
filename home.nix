@@ -46,7 +46,7 @@
             ];
             coc = {
                 enable = true;
-                settings = builtins.readFile ./coc-settings.json;
+                settings = builtins.fromJSON (builtins.readFile ./coc-settings.json);
             };
 
         };
