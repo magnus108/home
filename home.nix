@@ -14,6 +14,8 @@
             wget
             curl
             tig
+            virt-manager
+            virt-viewer
         ];
     };
 

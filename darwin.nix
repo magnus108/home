@@ -4,7 +4,7 @@
         substituters = ["https://cache.iog.io"];
         trusted-public-keys = ["hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="];
     };
-    
+
     programs.zsh.enable = true;
 
     environment.variables = {
@@ -142,7 +142,7 @@
                             yabai -m window --grid 4:4:1:1:2:2
                 # toggle window zoom
                 cmd - d : yabai -m window --toggle zoom-parent
-                cmd - f : yabai -m window --toggle native-fullscreen
+                shift + cmd - f : yabai -m window --toggle native-fullscreen
             '';
         };
     };
